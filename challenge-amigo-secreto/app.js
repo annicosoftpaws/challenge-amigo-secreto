@@ -1,12 +1,12 @@
-// 1. Seleccionar elementos del DOM
+
 const inputNombre = document.getElementById("amigo");
 const listaAmigos = document.getElementById("listaAmigos");
 const resultado = document.getElementById("resultado");
-let amigos = []; // 2. Crear array vacío
+let amigos = []; // Array vacio
 
-// 3. Función para agregar amigos a la lista
+// función para agregar amigos
 function agregarAmigo() {
-    const nombre = inputNombre.value.trim(); // Elimina espacios extra
+    const nombre = inputNombre.value.trim(); // Elimina espacios 
 
     if (nombre === "") {
         alert("Por favor, ingresa un nombre válido.");
@@ -18,7 +18,7 @@ function agregarAmigo() {
     inputNombre.value = ""; // Limpiar el input
 }
 
-// 4. Función para actualizar la lista en la interfaz
+// Función para actualizar la lista 
 function actualizarLista() {
     listaAmigos.innerHTML = ""; // Limpiar lista antes de actualizar
     amigos.forEach((amigo) => {
@@ -28,7 +28,7 @@ function actualizarLista() {
     });
 }
 
-// 5. Función para sortear un nombre
+// Función para sortear un nombre
 function sortearAmigo() {
     if (amigos.length === 0) {
         alert("Agrega nombres antes de sortear.");
@@ -40,7 +40,7 @@ function sortearAmigo() {
     const amigoSorteado = amigos[indiceAleatorio];
 
     // Mostrar el resultado en la pantalla
-    resultado.innerHTML = `<p>🎉 El amigo secreto es: <strong>${amigoSorteado}</strong> 🎉</p>`;
+    resultado.innerHTML = `<p>El amigo secreto es: <strong>${amigoSorteado}</strong> </p>`;
 
     // Vaciar la lista y el array después del sorteo
     amigos = [];
